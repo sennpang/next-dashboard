@@ -21,7 +21,7 @@ export function CardSkeleton() {
 export function CardsSkeleton() {
   return (
     <>
-      {[...new Array(4)].map(() => <CardSkeleton />)}
+      {[...new Array(4)].map((i) => <CardSkeleton key={i} />)}
     </>
   );
 }
@@ -64,7 +64,7 @@ export function LatestInvoicesSkeleton() {
       <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
       <div className="flex grow flex-col justify-between rounded-xl bg-gray-100 p-4">
         <div className="bg-white px-6">
-          {[...new Array(5)].map(() => <InvoiceSkeleton />)}
+          {[...new Array(5)].map((i) => <InvoiceSkeleton key={i} />)}
           <div className="flex items-center pb-2 pt-6">
             <div className="h-5 w-5 rounded-full bg-gray-200" />
             <div className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
@@ -82,7 +82,7 @@ export default function DashboardSkeleton() {
         className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`}
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {[...new Array(4)].map(() => <CardSkeleton />)}
+        {[...new Array(4)].map((i) => <CardSkeleton key={i} />)}
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         <RevenueChartSkeleton />
@@ -159,7 +159,7 @@ export function InvoicesTableSkeleton() {
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
           <div className="md:hidden">
-            {[...new Array(6)].map(() => <InvoicesMobileSkeleton />)}
+            {[...new Array(6)].map((i) => <InvoicesMobileSkeleton key={i} />)}
           </div>
           <table className="hidden min-w-full text-gray-900 md:table">
             <thead className="rounded-lg text-left text-sm font-normal">
@@ -188,7 +188,7 @@ export function InvoicesTableSkeleton() {
               </tr>
             </thead>
             <tbody className="bg-white">
-              {[...new Array(6)].map(() => <TableRowSkeleton />)}
+              {[...new Array(6)].map((i) => <TableRowSkeleton key={i} />)}
             </tbody>
           </table>
         </div>
